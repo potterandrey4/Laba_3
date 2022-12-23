@@ -2,7 +2,7 @@ package Characters;
 
 import Interfaces.*;
 
-public class People extends Something implements Location, KeptSilent, WillBeSilent, OtherActions, Say {
+public class People extends Something implements LocationWithAction, KeptSilent, WillBeSilent, Action, Say {
     public People() {
         super("Человек");
     }
@@ -14,6 +14,7 @@ public class People extends Something implements Location, KeptSilent, WillBeSil
     public void location(String action, String info_about_location) {
         System.out.println(this + " " + action + " " + info_about_location);
     }
+
 
     @Override
     public void keptSilent(String reason) {

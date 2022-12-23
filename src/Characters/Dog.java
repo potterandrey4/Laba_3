@@ -1,7 +1,7 @@
 package Characters;
 import Interfaces.*;
 
-public class Dog extends Something implements Location, OtherActions {
+public class Dog extends Something implements Location, LocationWithAction, Action {
 
     public Dog() {
         super("Собака");
@@ -10,8 +10,15 @@ public class Dog extends Something implements Location, OtherActions {
         super(name);
     }
     @Override
-    public void location(String action, String info_about_location) {
-        System.out.println(this + action + info_about_location);
+    public void location(String action, String infoAboutLocation) {
+        System.out.println(this + " " + action + " " + infoAboutLocation);
+    }
+
+    @Override
+    public void location(String location) {
+        //if (location.equals()) {
+            System.out.println(this + "");
+//        }
     }
 
     @Override

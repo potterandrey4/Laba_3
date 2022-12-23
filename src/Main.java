@@ -2,11 +2,12 @@ import Characters.*;
 
 public class Main {
     public static void main(String[] args) {
-        People malish = new People("Малыш");
+        Malish malish = new Malish();
         People mama = new People("Мама");
-        NotLivingSomething family = new NotLivingSomething("Семья");
         Dog bimbo = new Dog("Бимбо");
-        NotLivingSomething golubets = new NotLivingSomething("Голубцы");
+        Food golubets = new Food("Голубцы", "Полезное");
+        Table table = new Table("Обеденный стол");
+        Family family = new Family();
 
         malish.location("вернулся", "c крыши");
         malish.keptSilent("этом");
@@ -18,22 +19,26 @@ public class Main {
 
         malish.action("думал", "о её происхждении");
 
-        family.action("собралась", "дома");
+        family.location("дома");
 
         mama.say("всем идти обедать");
 
-        family.action("села", "за стол");
+        family.location(table.getName());
 
-        golubets.location("лежали", "на столе");
+        golubets.location(table.getName());
 
-        malish.action("не любит", "капусту");
-        malish.action("любит", "не полезную еду");
+        malish.likeOrDontLike(golubets);
 
         bimbo.location("лежал", "под столом");
 
         malish.action("развернул", "голубец");
         malish.action("скомкал", "капустный лист");
         malish.action("бросил", "капустный лист");
+
+
+
+
+
 
     }
 }

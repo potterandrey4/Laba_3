@@ -2,7 +2,7 @@ package Characters;
 import Interfaces.*;
 
 
-public class NotLivingSomething extends Something implements Location, OtherActions {
+public class NotLivingSomething extends Something implements LocationWithAction, Action {
 
     public NotLivingSomething() {
         super("Что-то");

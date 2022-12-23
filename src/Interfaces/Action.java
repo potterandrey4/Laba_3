@@ -1,5 +1,5 @@
 package Interfaces;
 
-public interface OtherActions {
+public interface Action {
     public void action(String action, String dop_info);
 }

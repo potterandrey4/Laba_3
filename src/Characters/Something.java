@@ -2,9 +2,15 @@ package Characters;
 
 public abstract class Something {
     private String name;
+    private String benefit;
 
     public Something(String name) {
         this.setName(name);
+    }
+
+    public Something(String name, String benefit) {
+        this.setName(name);
+        this.setBenefit(benefit);
     }
 
     public void setName(String name) {
@@ -13,6 +19,15 @@ public abstract class Something {
 
     public String getName() {
         return this.name;
+    }
+
+
+    public void setBenefit(String benefit) {
+        this.benefit = benefit;
+    }
+
+    public String getBenefit() {
+        return this.benefit;
     }
 
     @Override
