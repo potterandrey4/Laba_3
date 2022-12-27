@@ -1,7 +1,7 @@
 package Characters;
 
 public abstract class Something {
-    private String name;
+    public String name;
     private String benefit;
 
     public Something(String name) {

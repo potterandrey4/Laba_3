@@ -23,11 +23,11 @@ public class Family extends Something implements Location {
         Names(String name) {
             this.name = name;
         }
-
     }
+
     @Override
     public void location(String location) {
-        if(location.equals("дома")) {
+        if (location.equals("дома")) {
             System.out.println("Семья собралась " + location);
         }
 

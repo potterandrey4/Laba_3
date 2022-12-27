@@ -2,8 +2,9 @@ package Characters;
 import Interfaces.*;
 
 public class Food extends Something implements Location {
+
     public Food(String name) {
-        super("Еда");
+        super(name);
     }
 
     public Food(String name, String benefit) {
