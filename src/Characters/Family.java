@@ -1,9 +1,7 @@
 package Characters;
 
-import Interfaces.Action;
 import Interfaces.Location;
 
-import javax.naming.Name;
 
 
 public class Family extends Something implements Location {

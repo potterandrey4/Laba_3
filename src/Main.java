@@ -1,18 +1,27 @@
 import Characters.*;
+import Excipition.*;
+import Interfaces.Location;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnorrectBenefitException, UnorrectTableExcipition {
         Malish malish = new Malish();
         People mama = new People("Мама");
-        Dog bimbo = new Dog("Бимбо");
-        Food golubets = new Food("Голубцы", "Полезное");
+        Golubets golubets = new Golubets("Голубцы", "Полезное");
         Table table = new Table("Обеденный стол");
         Family family = new Family();
+        Malish.Stamps stamps = new Malish.Stamps();
+        Mum mum = new Mum();
 
+
+        mum.action(malish.visitedCarlson());
+        mum.action("задержалась");
+        mum.action("пришла позже");
+        malish.location("комната Малыша");
+        stamps.considerStamps();
         malish.location("вернулся", "c крыши");
         malish.keptSilent("этом");
         malish.action("неуверен", "поймёт ли мама");
-        malish.keptSilent("появлении Карлсона");
+        malish.keptSilentAboutCarlson();
         malish.willBeSilent("этом", "ужина");
 
         mama.action("показалась невесёлой", "из-за складки на лбу");
@@ -29,15 +38,22 @@ public class Main {
 
         malish.likeOrDontLike(golubets);
 
-        bimbo.location("лежал", "под столом");
+        Location bimbo = new Location() {
+          @Override
+          public void location(String location) {
+              if (location.equals("Обеденный стол")) {
+                  System.out.println("Бимбо лежал под обеденным столом");
+              }
+          }
+        };
+
+        bimbo.location(table.getName());
 
         malish.action("развернул", "голубец");
-        malish.action("скомкал", "капустный лист");
-        malish.action("бросил", "капустный лист");
 
 
-
-
+        Golubets.CabbageLeaf cabbageList = golubets.new CabbageLeaf();
+        cabbageList.whoInteracts(malish.getName());
 
 
     }

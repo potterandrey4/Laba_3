@@ -8,8 +8,4 @@ public class Table extends Something {
     public Table(String name) {
         super(name);
     }
-//    private String type;
-//    public static String getName() {
-//        return this.type;
-//    }
 }

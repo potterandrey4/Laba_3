@@ -11,10 +11,15 @@ public class People extends Something implements LocationWithAction, KeptSilent,
     }
 
     @Override
-    public void location(String action, String info_about_location) {
-        System.out.println(this + " " + action + " " + info_about_location);
+    public void location(String action, String infoAboutLocation) {
+        System.out.println(this + " " + action + " " + infoAboutLocation);
     }
 
+    public void silent(String reason) {
+        class Time {
+
+        }
+    }
 
     @Override
     public void keptSilent(String reason) {
@@ -27,8 +32,8 @@ public class People extends Something implements LocationWithAction, KeptSilent,
     }
 
     @Override
-    public void action(String action, String dop_info) {
-        System.out.println(this + " " + action + " "+ dop_info);
+    public void action(String action, String addInfo) {
+        System.out.println(this + " " + action + " "+ addInfo);
     }
 
     @Override
